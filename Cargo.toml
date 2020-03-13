@@ -1,0 +1,21 @@
+[package]
+name = "tracking"
+version = "0.1.0"
+authors = ["Zachary Bidwell <zach@fp2.ca>"]
+edition = "2018"
+
+[[bin]]
+name = "tracking"
+path = "src/bin/tracking.rs"
+
+[lib]
+name = "tracking"
+path = "src/lib/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { git = "https://github.com/clap-rs/clap/" }
+chrono = {version = "*", features = ["serde"]}
+rusqlite = "*"
+uuid = {version = "*", features = ["serde", "v4"]}
